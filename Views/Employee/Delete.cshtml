@@ -1,0 +1,59 @@
+﻿@model ProbusTest.Models.Employee
+
+@{
+    ViewData["Title"] = "Delete Employee";
+}
+
+<h1>Delete Employee</h1>
+
+<div>
+    <p>Are you want to delete this employee...?</p>
+    <dl class="row">
+ @*        <dt class="col-sm-2">ID</dt>
+        <dd class="col-sm-10">@Model.Id</dd> *@
+
+        <dt class="col-sm-2">Salution</dt>
+        <dd class="col-sm-10">@Model.Salution</dd>
+
+        <dt class="col-sm-2">Employee Name</dt>
+        <dd class="col-sm-10">@Model.EmployeeName</dd>
+
+        <dt class="col-sm-2">Company Name</dt>
+        <dd class="col-sm-10">@Model.CompanyName</dd>
+
+        <dt class="col-sm-2">Location</dt>
+        <dd class="col-sm-10">@Model.Location</dd>
+
+        <dt class="col-sm-2">Department</dt>
+        <dd class="col-sm-10">@Model.Department</dd>
+
+        <dt class="col-sm-2">Designation</dt>
+        <dd class="col-sm-10">@Model.Designation</dd>
+
+        <dt class="col-sm-2">Gender</dt>
+        <dd class="col-sm-10">@Model.Gender</dd>
+
+        <dt class="col-sm-2">Joining Date</dt>
+        <dd class="col-sm-10">@Model.JoiningDate</dd>
+
+        <dt class="col-sm-2">Company Mobile No</dt>
+        <dd class="col-sm-10">@Model.CompanyMobileNo</dd>
+
+        <dt class="col-sm-2">Mail Id</dt>
+        <dd class="col-sm-10">@Model.MailId</dd>
+
+       
+       
+      
+    </dl>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" name="Salution" value="@Model.Salution" />
+        <br/>
+        <div class="form-group">
+            <input type="submit" value="Delete" class="btn btn-danger" /> 
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
